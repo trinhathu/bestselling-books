@@ -6,6 +6,8 @@ This project provides visualizations to explore the [Amazon Top 50 Bestselling B
 
 ## Developing Locally
 
+### Running
+
 1.  Clone this repository, then run `npm install` in its root directory.
 
 1.  Run the Next.js development server with:
@@ -14,9 +16,13 @@ This project provides visualizations to explore the [Amazon Top 50 Bestselling B
 
 If your browser doesn't navigate to the site automatically, visit [localhost:3000](http://localhost:3000).
 
+### Building
+
 You can build the site locally by running: `npm run build`
 
 This project automatically builds and deploys to Netlify on merges to main.
+
+### Netlify CLI
 
 1.  To develop locally with full Netlify functionality, first install the Netlify CLI:
 
@@ -47,7 +53,7 @@ Shared components can be found under `/components`, and shared constants and typ
   - Title: make a prettier year slider
   - Wordcloud: add tooltip on hover that shows books with that word in the title
   - All: better responsiveness, especially for small screens (e.g., ensure labels and tooltips aren't squished)
-- Extend table sorting:
+- Extend table sorting
   - Support sorting by multiple columns
   - Add filtering (e.g., filter by genre)
   - Format data (e.g., numbers)
@@ -59,8 +65,8 @@ Shared components can be found under `/components`, and shared constants and typ
 - More defensive code, checks around data, handle empty arrays
 - Cache as much as possible / identify performance optimizations
 - Add tracking so we know which parts interest people
-- Internationalization
 - A better layout...
+- Internationalization
 
 ## ADRs
 
@@ -73,13 +79,13 @@ In the real world, if the standard for a company is to create web apps in Next.j
 For the sake of time, which I'm rapidly running low on, here are some quick summaries of decisions that could potentially be ADRs:
 
 - Use Netlify
-  - I've used it before and it's free.
+  - I've used it before, and it's free.
 - Use Next.js
-  - Habit, but it's also a very powerful framework and I like it. Plus, Netlify has a starter template that uses it.
+  - Habit, but it's also a very powerful framework, and I like it. Plus, Netlify has a starter template that uses it.
 - Use Typescript
   - Even if you hadn't said it was preferred, I would have used Typescript because I prefer it myself. Typescript makes it really clear what kind of data you're working with at any given time, and it makes React prop types a whole lot nicer.
 - Use Tailwind CSS
-  - While I like writing CSS, I didn't want to spend my limited time writing it. I wanted to use a framework to speed up my time to get something presentable on the page, and the Netlify starter template included it. I hadn't used Tailwind before (I've used Material UI more often), but I wanted to try it, and it was indeed east to get started.
+  - While I like writing CSS, I didn't want to spend my limited time writing it. I wanted to use a framework to speed up my time to get something presentable on the page, and the Netlify starter template included it. I hadn't used Tailwind before (I've used Material UI more often), but I wanted to try it, and it was indeed easy to get started.
 - Build a sortable table component
   - Why build when there are so many pre-built libraries and solutions for this use case? Mostly to showcase how I would approach writing a reusable component and demo more state management.
 
@@ -92,4 +98,4 @@ For the sake of time, which I'm rapidly running low on, here are some quick summ
 - [ ] Determine any SLAs/SLOs/SLIs
 - [ ] Add alerting based on the above
 - [ ] Write a troubleshooting handbook for when incidents arise
-- [ ] Ensure [ chosen cloud service provider ] is configured to scale properly
+- [ ] Ensure [_chosen cloud service provider_] is configured to scale properly
