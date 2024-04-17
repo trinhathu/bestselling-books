@@ -40,6 +40,8 @@ function wordFreq(words: string[]): WordData[] {
     return Object.keys(freqMap).map((word) => ({ text: word, value: freqMap[word] }));
 }
 
+const fixedValueGenerator = () => 0.5;
+
 type SpiralType = 'archimedean' | 'rectangular';
 
 export default function WordCloud({ width, height, data }: WordCloudProps) {
@@ -64,6 +66,7 @@ export default function WordCloud({ width, height, data }: WordCloudProps) {
                 padding={2}
                 spiral={spiralType}
                 rotate={0}
+                random={fixedValueGenerator}
             >
                 {(cloudWords) =>
                     cloudWords.map((w, i) => (
