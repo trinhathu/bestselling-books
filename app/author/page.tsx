@@ -30,16 +30,16 @@ export default function Page() {
     const data = getData();
     const dataByAuthor: Record<string, BestsellingBook> = {};
     data.forEach((book) => {
-        if (!dataByAuthor[book['Author']]) {
-            dataByAuthor[book['Author']] = {
+        if (!dataByAuthor[book.Author]) {
+            dataByAuthor[book.Author] = {
                 years: new Set(),
                 genre: new Set(),
                 books: {}
             };
         }
-        dataByAuthor[book['Author']].years.add(book['Year']);
-        dataByAuthor[book['Author']].genre.add(book['Genre']);
-        dataByAuthor[book['Author']].books[book['Year']] = book['Name'];
+        dataByAuthor[book.Author].years.add(book.Year);
+        dataByAuthor[book.Author].genre.add(book.Genre);
+        dataByAuthor[book.Author].books[book.Year] = book.Name;
     });
 
     const fictionAuthors = getAuthorsByGenre(dataByAuthor, 'Fiction');

@@ -2,7 +2,7 @@ import { getData } from '../bestsellers/route';
 import Genre from './genre';
 
 export const metadata = {
-    title: 'Genre'
+    title: 'Bestsellers by Genre'
 };
 
 export type BookGenreCount = {
@@ -14,13 +14,13 @@ export default function Page() {
     const data = getData();
     const dataByYear: Record<string, BookGenreCount> = {};
     data.forEach((book) => {
-        if (!dataByYear[book['Year']]) {
-            dataByYear[book['Year']] = {
+        if (!dataByYear[book.Year]) {
+            dataByYear[book.Year] = {
                 Fiction: 0,
                 'Non Fiction': 0
             };
         }
-        dataByYear[book['Year']][book['Genre']]++;
+        dataByYear[book.Year][book.Genre]++;
     });
 
     return <Genre data={dataByYear} />;

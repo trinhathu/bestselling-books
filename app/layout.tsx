@@ -5,8 +5,8 @@ import { Footer } from '../components/footer';
 
 export const metadata = {
     title: {
-        template: '%s | Analysizing Bestselling Books',
-        default: 'Analysizing Bestselling Books on Amazon'
+        template: '%s | Analyzing Bestselling Books',
+        default: 'Analyzing Bestselling Books on Amazon'
     }
 };
 

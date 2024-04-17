@@ -13,10 +13,10 @@ export default function Page() {
     const data = getData();
     const booksByYear: TitlesByYear = {};
     data.forEach((book) => {
-        if (!booksByYear[book['Year']]) {
-            booksByYear[book['Year']] = [];
+        if (!booksByYear[book.Year]) {
+            booksByYear[book.Year] = [];
         }
-        booksByYear[book['Year']].push(book.Name);
+        booksByYear[book.Year].push(book.Name);
     });
 
     return <Title data={booksByYear} />;
