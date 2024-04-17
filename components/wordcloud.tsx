@@ -45,6 +45,7 @@ const fixedValueGenerator = () => 0.5;
 type SpiralType = 'archimedean' | 'rectangular';
 
 export default function WordCloud({ width, height, data }: WordCloudProps) {
+    // TODO: allow customization?
     const spiralType: SpiralType = 'rectangular';
 
     const words = useMemo(() => wordFreq(data), [data]);

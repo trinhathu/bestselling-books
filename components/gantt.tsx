@@ -6,8 +6,6 @@ import { withTooltip, Tooltip, defaultStyles } from '@visx/tooltip';
 import { WithTooltipProvidedProps } from '@visx/tooltip/lib/enhancers/withTooltip';
 import {
     CHART_BG,
-    CHART_BLUE_DARK,
-    CHART_BLUE_LIGHT,
     CHART_PURPLE_DARK,
     CHART_PURPLE_LIGHT,
     CHART_PURPLE_MED,
