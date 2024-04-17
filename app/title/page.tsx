@@ -2,7 +2,7 @@ import { getData } from '../bestsellers/route';
 import Title from './title';
 
 export const metadata = {
-    title: 'By Title'
+    title: 'Bestselling Titles by Year'
 };
 
 export type TitlesByYear = {

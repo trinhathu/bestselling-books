@@ -13,6 +13,7 @@ type BestsellingBook = {
     books: Record<number, string>;
 };
 
+/** Grab the bestselling authors, sort them by most -> least years on the bestsellers list, and transform the data to match the AuthorData type */
 const getAuthorsByGenre = (
     dataByAuthor: Record<string, BestsellingBook>,
     genre: 'Fiction' | 'Non Fiction'

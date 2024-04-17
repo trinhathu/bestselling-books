@@ -13,7 +13,8 @@ export default function Page() {
                     dataset. Take a look around by using the navigation above.
                 </p>
                 <p>
-                    Built using <Link href="https://airbnb.io/visx">Visx</Link> and deloyed on{' '}
+                    Built using <Link href="https://nextjs.org/">Next.js</Link> with{' '}
+                    <Link href="https://airbnb.io/visx">Visx</Link> for visualizations, and deloyed on{' '}
                     <Link href="https://netlify.com/">Netlify</Link>.
                 </p>
             </section>

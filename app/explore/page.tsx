@@ -6,7 +6,7 @@ export const metadata = {
     title: 'Explore the Data'
 };
 
-export default async function Page() {
+export default function Page() {
     const data = getData();
     const booksByYear: Record<string, BookData[]> = {};
     data.forEach((book) => {
